@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Tringle msg=""/>
+  <ButtonInput msg=""/>
+  <div v-if="step === 'step-1'"></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tringle from './components/Tringle.vue'
+import ButtonInput from './components/ButtonInput.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Tringle,
+    ButtonInput
+  },
+  data () {
+    return {
+      step: 'step-1'
+    }
   }
 }
 </script>
